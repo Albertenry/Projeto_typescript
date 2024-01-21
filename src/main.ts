@@ -1,6 +1,6 @@
-import Pokemon from "./pokemon";
-import Movie from "./movie";
-import Country from "./country"
+import Pokemon from "./modules/pokemon";
+import Movie from "./modules/movie";
+import Country from "./modules/country"
 
 const pokemonData = {
   "id": 132,
