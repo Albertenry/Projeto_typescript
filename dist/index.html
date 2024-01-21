@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="container">
+            <div class="section" id="pokemon-section">
+                <h2>Pokémon Information</h2>
+                <div id="pokemon-info"></div>
+            </div>
+
+            <div class="section" id="movie-section">
+                <h2>Movie Information</h2>
+                <div id="movie-info"></div>
+            </div>
+
+            <div class="section" id="country-section">
+                <h2>Country Information</h2>
+                <div id="country-info"></div>
+            </div>
+        </div>
+
+        <script src="dist/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Pokémon Information
+                const pokemonInfo = document.getElementById("pokemon-info");
+
+                const pokemonId = document.createElement("p");
+                pokemonId.textContent = "ID: " + ditto.id;
+                pokemonInfo.appendChild(pokemonId);
+
+                const pokemonName = document.createElement("p");
+                pokemonName.textContent = "Name: " + ditto.name;
+                pokemonInfo.appendChild(pokemonName);
+
+                const baseExperience = document.createElement("p");
+                baseExperience.textContent = "Base Experience: " + ditto.base_experience;
+                pokemonInfo.appendChild(baseExperience);
+
+                const height = document.createElement("p");
+                height.textContent = "Height: " + ditto.height;
+                pokemonInfo.appendChild(height);
+
+                const weight = document.createElement("p");
+                weight.textContent = "Weight: " + ditto.weight;
+                pokemonInfo.appendChild(weight);
+
+                const isLegendary = document.createElement("p");
+                isLegendary.textContent = "Legendary: " + (ditto.legendary ? 'Yes' : 'No');
+                pokemonInfo.appendChild(isLegendary);
+
+                const firstAppearance = document.createElement("p");
+                firstAppearance.textContent = "First Appearance: " + ditto.firstAppearance;
+                pokemonInfo.appendChild(firstAppearance);
+
+                const abilities = document.createElement("p");
+                abilities.textContent = "Abilities: " + ditto.abilities.join(", ");
+                pokemonInfo.appendChild(abilities);
+
+                const statsList = document.createElement("ul");
+                ditto.stats.forEach(stat => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${stat.stat}: ${stat.base_stat}`;
+                    statsList.appendChild(listItem);
+                });
+                pokemonInfo.appendChild(statsList);
+            });
+        </script>
+
+        <script>
+            // Movie Information
+            const movieInfo = document.getElementById("movie-info");
+            const movieTitle = document.createElement("p");
+            movieTitle.textContent = "Title: " + guardiansOfTheGalaxy.title;
+            movieInfo.appendChild(movieTitle);
+
+            // Adicione mais informações sobre o filme aqui, conforme necessário
+
+            // Country Information
+            const countryInfo = document.getElementById("country-info");
+            const countryName = document.createElement("p");
+            countryName.textContent = "Country: " + brazil.name.common;
+            countryInfo.appendChild(countryName);
+
+            // Adicione mais informações sobre o país aqui, conforme necessário
+        </script>
+    </div>
+
+</body>
+
+</html>

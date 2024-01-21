@@ -1,0 +1,17 @@
+{
+  "name": "typescript1.0",
+  "version": "1.0.0",
+  "description": "Descrição de classes",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "compile": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Seu Nome",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
