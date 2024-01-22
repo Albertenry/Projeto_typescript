@@ -74,5 +74,3 @@ export default class Country {
     }
   }
   
-  // Exemplo de uso
-  

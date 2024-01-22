@@ -54,7 +54,5 @@ export default class Movie {
       console.log("Vote Count:", this.vote_count);
     }
   }
-  
-  // Exemplo de uso
 
   
